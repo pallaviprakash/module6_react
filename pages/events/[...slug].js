@@ -15,7 +15,7 @@ function FilteredEventsPage(props) {
   const filterData = router.query.slug;
 
   const { data, error } = useSWR(
-    'https://nextjs-course-c81cc-default-rtdb.firebaseio.com/events.json',
+    'https://nextjs-course5-default-rtdb.firebaseio.com/events.json',
     (url) => fetch(url).then(res => res.json())
   );
 
@@ -116,26 +116,26 @@ function FilteredEventsPage(props) {
 //     numMonth > 12
 //   ) {
 //     return {
-//       props: { hasError: true },
+//       props: { hasError: true }
 //       // notFound: true,
 //       // redirect: {
-//       //   destination: '/error'
+//       //   destination: '/'
 //       // }
 //     };
 //   }
 
 //   const filteredEvents = await getFilteredEvents({
-//     year: numYear,
-//     month: numMonth,
+//         year: numYear,
+//         month: numMonth,
 //   });
 
 //   return {
-//     props: {
+//     props: { 
 //       events: filteredEvents,
 //       date: {
 //         year: numYear,
-//         month: numMonth,
-//       },
+//         month: numMonth
+//       }
 //     },
 //   };
 // }
